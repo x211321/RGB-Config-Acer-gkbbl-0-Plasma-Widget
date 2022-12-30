@@ -12,7 +12,7 @@ X-Plasma-MainScript=ui/main.qml
 X-Plasma-NotificationArea=true
 X-Plasma-NotificationAreaCategory=Hardware
 
-X-KDE-PluginInfo-Name=com.github.x211321.rgb-config-acer-gkbbl-0-plasmoid
+X-KDE-PluginInfo-Name=com.github.x211321.rgb-config-acer-gkbbl-0-plasma-widget
 X-KDE-PluginInfo-Category=
 X-KDE-PluginInfo-Author=x211321
 X-KDE-PluginInfo-Email=

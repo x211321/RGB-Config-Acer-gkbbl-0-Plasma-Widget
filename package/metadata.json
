@@ -8,7 +8,7 @@
         ],
         "Category": "Utilities",
         "Description": "A widget to control the RGB settings of the Acer gkbbl-0 character device",
-        "Id": "com.github.x211321.rgb-config-acer-gkbbl-0-plasmoid",
+        "Id": "com.github.x211321.rgb-config-acer-gkbbl-0-plasma-widget",
         "Name": "Acer RGB Config (gkbbl-0)",
         "ServiceTypes": [
             "Plasma/Applet"
