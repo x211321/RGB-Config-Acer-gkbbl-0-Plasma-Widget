@@ -1,0 +1,21 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "",
+                "Name": "x211321"
+            }
+        ],
+        "Category": "Utilities",
+        "Description": "A widget to control the RGB settings of the Acer gkbbl-0 character device",
+        "Id": "com.github.x211321.rgb-config-acer-gkbbl-0-plasmoid",
+        "Name": "Acer RGB Config (gkbbl-0)",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "0.1.0",
+        "Website": "https://github.com/x211321/RGB-Config-Acer-gkbbl-0-Plasma-Widget"
+    },
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml"
+}

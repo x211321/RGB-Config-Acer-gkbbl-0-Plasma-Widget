@@ -1,0 +1,23 @@
+[Desktop Entry]
+Name=RGB Config (Acer)
+Comment=A widget to control the RGB settings of the Acer gkbbl-0 character device
+
+Icon=YES
+Type=Service
+X-KDE-ServiceTypes=Plasma/Applet
+
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
+
+X-Plasma-NotificationArea=true
+X-Plasma-NotificationAreaCategory=Hardware
+
+X-KDE-PluginInfo-Name=com.github.x211321.rgb-config-acer-gkbbl-0-plasmoid
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Author=x211321
+X-KDE-PluginInfo-Email=
+X-KDE-PluginInfo-Version=0.1.0
+X-KDE-PluginInfo-Website=https://github.com/x211321/RGB-Config-Acer-gkbbl-0-Plasma-Widget
+X-KDE-PluginInfo-License=MIT
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-FormFactors=desktop
