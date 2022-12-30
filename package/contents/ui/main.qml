@@ -172,7 +172,7 @@ Item {
 
         function missingCharacterDeviceNotification(message) {
             var service = notification.serviceForSource("notification");
-            var operation = service.operationDescription("missingCharacterDeviceNotification");
+            var operation = service.operationDescription("createNotification");
 
             operation.appName = i18n("RGB config (Acer)")
             operation["appIcon"] = "data-error"
@@ -185,7 +185,7 @@ Item {
 
         function unexpectedErrorNotification(message) {
             var service = notification.serviceForSource("notification");
-            var operation = service.operationDescription("unexpectedErrorNotification");
+            var operation = service.operationDescription("createNotification");
 
             operation.appName = i18n("RGB config (Acer)")
             operation["appIcon"] = "data-error"
