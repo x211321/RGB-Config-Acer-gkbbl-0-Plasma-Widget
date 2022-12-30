@@ -25,7 +25,7 @@ For a non-KDE solution and additional functionality check out my [other project]
 ## Manual install (GUI)
 I have not yet uploaded the widget to the KDE store, I plan on doing so once the widget has been tested for a while.
 
-To manually install the widget download the **.plasmoid** file from the [releases page](https://github.com/x211321/RRGB-Config-Acer-gkbbl-0-Plasma-Widget/releases) and open it through the KDE widget manager. 
+To manually install the widget download the **.plasmoid** file from the [releases page](https://github.com/x211321/RGB-Config-Acer-gkbbl-0-Plasma-Widget/releases) and open it through the KDE widget manager. 
 
 ### **Open the KDE widget manager**
 
