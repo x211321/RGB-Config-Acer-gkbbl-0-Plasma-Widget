@@ -189,7 +189,7 @@ Item {
 
             operation.appName = i18n("RGB config (Acer)")
             operation["appIcon"] = "data-error"
-            operation.summary = i18n("Unexpected error"")
+            operation.summary = i18n("Unexpected error")
             operation["body"] = message
             operation["timeout"] = 2000
 
