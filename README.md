@@ -49,7 +49,7 @@ To manually install the widget download the **.plasmoid** file from the [release
 
 From here out you can either use the widget via the system tray or use the KDE widget manager to place the widget on your desktop, taskbar or wherever you like.
 
-Use the KDE system tray configuration if you don't want the widget in your system tray.
+You can disable the widget via the KDE system tray configuration if you don't want it in your system tray.
 
 
 ## Manual install (Command line)
