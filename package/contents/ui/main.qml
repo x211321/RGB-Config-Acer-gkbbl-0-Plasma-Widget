@@ -6,7 +6,6 @@ import QtQuick.Controls.Universal 2.12
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.plasmoid 2.0
-import org.kde.notification 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import QtGraphicalEffects 1.0
@@ -21,8 +20,6 @@ Item {
     property var labelHeight: 30
     property var labelMargin: 5
     property var labelSpacing: 20
-
-    property var lastErrorText: ""
 
     readonly property int rgb_mode_static  : 0
     readonly property int rgb_mode_breath  : 1
@@ -167,28 +164,36 @@ Item {
             signal commandExecuted(string sourceName, string stdout, string stderr)
         }
 
-        Notification {
-            id: missingCharacterDeviceNotification
-            componentName: "plasma_workspace"
-            eventId: "notification"
-            title: i18n("RGB config: character device not available")
-            text: lastErrorText
-            iconName: "data-error"
-            actions: ["Installation instructions"]
-            flags: Notification.Persistent
-            urgency: Notification.HighUrgency
-            onAction1Activated: Qt.openUrlExternally("https://github.com/JafarAkhondali/acer-predator-turbo-and-rgb-keyboard-linux-module#unofficial-acer-gaming-rgb-keyboard-backlight-and-turbo-mode-linux-kernel-module-acer-predator-acer-helios-acer-nitro")
+        PlasmaCore.DataSource {
+            id: notification
+            engine: "notifications"
+            connectedSources: "org.freedesktop.Notifications"
         }
 
-        Notification {
-            id: unexpectedErrorNotification
-            componentName: "plasma_workspace"
-            eventId: "notification"
-            title: i18n("RGB config: unexpected error")
-            text: lastErrorText
-            iconName: "data-error"
-            flags: Notification.Persistent
-            urgency: Notification.HighUrgency
+        function missingCharacterDeviceNotification(message) {
+            var service = notification.serviceForSource("notification");
+            var operation = service.operationDescription("missingCharacterDeviceNotification");
+
+            operation.appName = i18n("RGB config (Acer)")
+            operation["appIcon"] = "data-error"
+            operation.summary = i18n("Character device not available")
+            operation["body"] = message
+            operation["timeout"] = 2000
+
+            service.startOperationCall(operation);
+        }
+
+        function unexpectedErrorNotification(message) {
+            var service = notification.serviceForSource("notification");
+            var operation = service.operationDescription("unexpectedErrorNotification");
+
+            operation.appName = i18n("RGB config (Acer)")
+            operation["appIcon"] = "data-error"
+            operation.summary = i18n("Unexpected error"")
+            operation["body"] = message
+            operation["timeout"] = 2000
+
+            service.startOperationCall(operation);
         }
 
         Connections {
@@ -201,18 +206,15 @@ Item {
                 if (parseInt(stdout)) {
                     switch(parseInt(stdout)) {
                         case 1:
-                            lastErrorText = i18n("The character device at /dev/acer-gkbbl-0 is not available. Please make sure the necessary kernel module is installed and loaded.")
-                            missingCharacterDeviceNotification.sendEvent()
+                            missingCharacterDeviceNotification(i18n("The character device at /dev/acer-gkbbl-0 is not available. Please make sure the necessary kernel module is installed and loaded."))
                             break;
                         case 2:
-                            lastErrorText = i18n("The character device at /dev/acer-gkbbl-static-0 is not available. Please make sure the necessary kernel module is installed and loaded.")
-                            missingCharacterDeviceNotification.sendEvent()
+                            missingCharacterDeviceNotification(i18n("The character device at /dev/acer-gkbbl-static-0 is not available. Please make sure the necessary kernel module is installed and loaded."))
                             break;
                     } 
                 } else {
                     if (stderr.length) {
-                        lastErrorText = stderr
-                        unexpectedErrorNotification.sendEvent()
+                        unexpectedErrorNotification(stderr)
                     }
                 }
             }
