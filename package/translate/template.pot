@@ -1,0 +1,118 @@
+# Translation of rgb-config-acer-gkbbl-0-plasma-widget in LANGUAGE
+# Copyright (C) 2022
+# This file is distributed under the same license as the rgb-config-acer-gkbbl-0-plasma-widget package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: rgb-config-acer-gkbbl-0-plasma-widget\n"
+"Report-Msgid-Bugs-To: https://github.com/x211321/RGB-Config-Acer-gkbbl-0-Plasma-Widget\n"
+"POT-Creation-Date: 2022-12-31 20:21+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../metadata.desktop ../contents/ui/main.qml
+msgid "RGB Config (Acer)"
+msgstr ""
+
+#: ../metadata.desktop
+msgid "Control Acer RGB Settings"
+msgstr ""
+
+#: ../contents/config/config.qml
+msgid "General"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml
+msgid "Show header:"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml
+msgid "Apply last settings on startup:"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml
+msgid "Tray icon color:"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Colors"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "RGB config (Acer): Character device not available"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "The character device at /dev/acer-gkbbl-0 is not available. Please make sure the necessary kernel module is installed and loaded."
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "RGB config (Acer): Static character device not available"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "The character device at /dev/acer-gkbbl-static-0 is not available. Please make sure the necessary kernel module is installed and loaded."
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "RGB config (Acer): Unexpected error"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "RGB Mode"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Static"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Breath"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Neon"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Wave"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Shifting"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Zoom"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Brightness"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Speed"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Direction"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Left to right"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Right to left"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Color section "
+msgstr ""

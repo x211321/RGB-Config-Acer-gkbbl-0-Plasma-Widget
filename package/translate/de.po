@@ -1,0 +1,134 @@
+# Translation of rgb-config-acer-gkbbl-0-plasma-widget in de
+# Copyright (C) 2022
+# This file is distributed under the same license as the rgb-config-acer-gkbbl-0-plasma-widget package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: rgb-config-acer-gkbbl-0-plasma-widget\n"
+"Report-Msgid-Bugs-To: https://github.com/x211321/RGB-Config-Acer-gkbbl-0-"
+"Plasma-Widget\n"
+"POT-Creation-Date: 2022-12-31 20:21+0100\n"
+"PO-Revision-Date: 2022-12-31 20:24+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: ../metadata.desktop ../contents/ui/main.qml
+msgid "RGB Config (Acer)"
+msgstr "RGB Konfiguration (Acer)"
+
+#: ../metadata.desktop
+msgid "Control Acer RGB Settings"
+msgstr "Steuer Acer RGB Einstellungen"
+
+#: ../contents/config/config.qml
+msgid "General"
+msgstr "Allgemein"
+
+#: ../contents/ui/configGeneral.qml
+msgid "Show header:"
+msgstr "Überschrift anzeigen:"
+
+#: ../contents/ui/configGeneral.qml
+msgid "Apply last settings on startup:"
+msgstr "Letzte Einstellungen beim Start anwenden:"
+
+#: ../contents/ui/configGeneral.qml
+msgid "Tray icon color:"
+msgstr "Tray-Icon Farbe:"
+
+#: ../contents/ui/main.qml
+msgid "Colors"
+msgstr "Farben"
+
+#: ../contents/ui/main.qml
+msgid "RGB config (Acer): Character device not available"
+msgstr "RGB Konfiguration (Acer): RGB Gerät nicht verfügbar"
+
+#: ../contents/ui/main.qml
+msgid ""
+"The character device at /dev/acer-gkbbl-0 is not available. Please make sure "
+"the necessary kernel module is installed and loaded."
+msgstr ""
+"Das RGB Gerät /dev/acer-gkbbl-0 ist nicht verfügbar. Bitte überprüfe ob das "
+"benötigte Kernel Modul installiert und geladen ist."
+
+#: ../contents/ui/main.qml
+msgid "RGB config (Acer): Static character device not available"
+msgstr "RGB Konfiguration (Acer): Statisches RGB Gerät nicht verfügbar"
+
+#: ../contents/ui/main.qml
+msgid ""
+"The character device at /dev/acer-gkbbl-static-0 is not available. Please "
+"make sure the necessary kernel module is installed and loaded."
+msgstr ""
+"Das RGB Gerät /dev/acer-gkbbl-static-0 ist nicht verfügbar. Bitte überprüfe "
+"ob das benötigte Kernel Modul installiert und geladen ist."
+
+#: ../contents/ui/main.qml
+msgid "RGB config (Acer): Unexpected error"
+msgstr "RGB Konfiguration (Acer): Unerwarteter Fehler"
+
+#: ../contents/ui/main.qml
+msgid "RGB Mode"
+msgstr "RGB Modus"
+
+#: ../contents/ui/main.qml
+msgid "Static"
+msgstr "Static"
+
+#: ../contents/ui/main.qml
+msgid "Breath"
+msgstr "Breath"
+
+#: ../contents/ui/main.qml
+msgid "Neon"
+msgstr "Neon"
+
+#: ../contents/ui/main.qml
+msgid "Wave"
+msgstr "Wave"
+
+#: ../contents/ui/main.qml
+msgid "Shifting"
+msgstr "Shifting"
+
+#: ../contents/ui/main.qml
+msgid "Zoom"
+msgstr "Zoom"
+
+#: ../contents/ui/main.qml
+msgid "Brightness"
+msgstr "Helligkeit"
+
+#: ../contents/ui/main.qml
+msgid "Speed"
+msgstr "Geschwindigkeit"
+
+#: ../contents/ui/main.qml
+msgid "Direction"
+msgstr "Richtung"
+
+#: ../contents/ui/main.qml
+msgid "Left to right"
+msgstr "Links nach Rechts"
+
+#: ../contents/ui/main.qml
+msgid "Right to left"
+msgstr "Rechts nach Links"
+
+#: ../contents/ui/main.qml
+msgid "Color section "
+msgstr "Farbauswahl "
+
+#~ msgid "%1%"
+#~ msgstr "%1%"
+
+#~ msgid "%1"
+#~ msgstr "%1"

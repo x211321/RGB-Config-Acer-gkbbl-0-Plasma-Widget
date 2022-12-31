@@ -16,9 +16,9 @@ Item {
 
     property string icon: Qt.resolvedUrl("rgbconfig.svg")
 
-    property var labelWidth: 80
+    property var labelWidth: 90
     property var labelHeight: 30
-    property var labelMargin: 5
+    property var labelMargin: 2
     property var labelSpacing: 20
 
     readonly property int rgb_mode_static  : 0
@@ -183,19 +183,19 @@ Item {
                 if (parseInt(stdout)) {
                     switch(parseInt(stdout)) {
                         case 1:
-                            errorTitle   = "RGB config (Acer): Character device not available"
-                            errorMessage = "The character device at /dev/acer-gkbbl-0 is not available. Please make sure the necessary kernel module is installed and loaded."
+                            errorTitle   = i18n("RGB config (Acer): Character device not available")
+                            errorMessage = i18n("The character device at /dev/acer-gkbbl-0 is not available. Please make sure the necessary kernel module is installed and loaded.")
                             errorMessageDialog.open()
                             break;
                         case 2:
-                            errorTitle   = "RGB config (Acer): Static character device not available"
-                            errorMessage = "The character device at /dev/acer-gkbbl-static-0 is not available. Please make sure the necessary kernel module is installed and loaded."
+                            errorTitle   = i18n("RGB config (Acer): Static character device not available")
+                            errorMessage = i18n("The character device at /dev/acer-gkbbl-static-0 is not available. Please make sure the necessary kernel module is installed and loaded.")
                             errorMessageDialog.open()
                             break;
                     } 
                 } else {
                     if (stderr.length) {
-                        errorTitle   = "RGB config (Acer): Unexpected error"
+                        errorTitle   = i18n("RGB config (Acer): Unexpected error")
                         errorMessage = stderr
                         errorMessageDialog.open()
                     }
@@ -288,7 +288,7 @@ Item {
                 id: brightnessSliderLabel
 
                 function formatText(value) {
-                    return i18n("%1%", value)
+                    return "%1%", value
                 }
 
                 text: formatText(brightnessSlider.value)
@@ -334,7 +334,7 @@ Item {
                 id: speedSliderLabel
 
                 function formatText(value) {
-                    return i18n("%1", value)
+                    return "%1", value
                 }
 
                 text: formatText(speedSlider.value)

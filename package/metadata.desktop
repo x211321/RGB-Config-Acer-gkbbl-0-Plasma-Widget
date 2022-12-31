@@ -21,3 +21,6 @@ X-KDE-PluginInfo-Website=https://github.com/x211321/RGB-Config-Acer-gkbbl-0-Plas
 X-KDE-PluginInfo-License=MIT
 X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-FormFactors=desktop
+
+Name[de]=RGB Konfiguration (Acer)
+Comment[de]=Steuer Acer RGB Einstellungen
