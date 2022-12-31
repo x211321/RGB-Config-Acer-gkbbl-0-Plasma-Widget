@@ -55,6 +55,6 @@ You can disable the widget via the KDE system tray configuration if you don't wa
 ## Manual install (Command line)
 Use the following command to install the widget via command line
 ```
-plasmapkg2 -i RGB-Config-Acer-<VERSION>.plasmoid
+plasmapkg2 -u RGB-Config-Acer-<VERSION>.plasmoid
 ```
 
