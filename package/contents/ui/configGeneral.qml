@@ -9,12 +9,21 @@ Kirigami.FormLayout {
     id: page
     property alias cfg_customIconColor: customIconColor.color
     property alias cfg_showHeader: showHeader.checked
+    property alias cfg_applyOnStartup: applyOnStartup.checked
 
     RowLayout {
         Kirigami.FormData.label:i18n("Show header:")
 
         QtControls.CheckBox {
             id: showHeader
+        }
+    }
+
+    RowLayout {
+        Kirigami.FormData.label:i18n("Apply last settings on startup:")
+
+        QtControls.CheckBox {
+            id: applyOnStartup
         }
     }
 

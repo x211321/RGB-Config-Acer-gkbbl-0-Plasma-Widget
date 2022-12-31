@@ -69,7 +69,7 @@ Item {
         spacing: 5
 
         Component.onCompleted: {
-            updateRGBMode()    
+            updateRGBMode(plasmoid.configuration.applyOnStartup)    
         }
 
         function updateRGBMode(apply = false) {
