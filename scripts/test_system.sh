@@ -8,4 +8,4 @@ mkdir ~/.local/share/plasma/plasmoids/$name
 
 cp -r ../package/* ~/.local/share/plasma/plasmoids/$name
 
-plasmashell --replace &
+nohup plasmashell --replace &
