@@ -13,7 +13,7 @@
         "ServiceTypes": [
             "Plasma/Applet"
         ],
-        "Version": "0.1.1",
+        "Version": "0.1.2",
         "Website": "https://github.com/x211321/RGB-Config-Acer-gkbbl-0-Plasma-Widget"
     },
     "X-Plasma-API": "declarativeappletscript",

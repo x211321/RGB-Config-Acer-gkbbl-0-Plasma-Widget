@@ -33,17 +33,28 @@ def applySettings():
 
     # Get command-line arguments
     for i in range(1, len(sys.argv), 2):
-        match sys.argv[i]:
-            case "-m":
-                mode       = int(sys.argv[i+1])
-            case "-b":
-                brightness = int(sys.argv[i+1])
-            case "-s":
-                speed      = int(sys.argv[i+1])
-            case "-d":
-                direction  = int(sys.argv[i+1])
-            case "-c":
-                tempColors = sys.argv[i+1]
+        if sys.argv[i] == "--check":
+            # Check RGB device available
+            if not os.path.exists(RGB_DEVICE):
+                print("1")
+                return 
+
+            # Check if static device available
+            if not os.path.exists(RGB_DEVICE_STATIC):
+                print("2")
+                return
+
+        if sys.argv[i] == "-m":
+            mode       = int(sys.argv[i+1])
+        if sys.argv[i] == "-b":
+            brightness = int(sys.argv[i+1])
+        if sys.argv[i] == "-s":
+            speed      = int(sys.argv[i+1])
+        if sys.argv[i] == "-d":
+            direction  = int(sys.argv[i+1])
+        if sys.argv[i] == "-c":
+            tempColors = sys.argv[i+1]
+
 
     tempColors = tempColors.split(",")
 

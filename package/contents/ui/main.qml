@@ -28,6 +28,9 @@ Item {
     readonly property int rgb_mode_shifting: 4
     readonly property int rgb_mode_zoom    : 5
 
+    property var errorTitle  : ""
+    property var errorMessage: ""
+
     readonly property var widgetStates: [
         {'mode': rgb_mode_static  , 'speed': 0, 'direction': 0, 'colors': [1,1,1,1]},
         {'mode': rgb_mode_breath  , 'speed': 1, 'direction': 0, 'colors': [1,0,0,0]},
@@ -164,36 +167,10 @@ Item {
             signal commandExecuted(string sourceName, string stdout, string stderr)
         }
 
-        PlasmaCore.DataSource {
-            id: notification
-            engine: "notifications"
-            connectedSources: "org.freedesktop.Notifications"
-        }
-
-        function missingCharacterDeviceNotification(message) {
-            var service = notification.serviceForSource("notification");
-            var operation = service.operationDescription("createNotification");
-
-            operation.appName = i18n("RGB config (Acer)")
-            operation["appIcon"] = "data-error"
-            operation.summary = i18n("Character device not available")
-            operation["body"] = message
-            operation["timeout"] = 2000
-
-            service.startOperationCall(operation);
-        }
-
-        function unexpectedErrorNotification(message) {
-            var service = notification.serviceForSource("notification");
-            var operation = service.operationDescription("createNotification");
-
-            operation.appName = i18n("RGB config (Acer)")
-            operation["appIcon"] = "data-error"
-            operation.summary = i18n("Unexpected error")
-            operation["body"] = message
-            operation["timeout"] = 2000
-
-            service.startOperationCall(operation);
+        MessageDialog {
+            id: errorMessageDialog
+            title: errorTitle
+            text: errorMessage
         }
 
         Connections {
@@ -206,15 +183,21 @@ Item {
                 if (parseInt(stdout)) {
                     switch(parseInt(stdout)) {
                         case 1:
-                            missingCharacterDeviceNotification(i18n("The character device at /dev/acer-gkbbl-0 is not available. Please make sure the necessary kernel module is installed and loaded."))
+                            errorTitle   = "RGB config (Acer): Character device not available"
+                            errorMessage = "The character device at /dev/acer-gkbbl-0 is not available. Please make sure the necessary kernel module is installed and loaded."
+                            errorMessageDialog.open()
                             break;
                         case 2:
-                            missingCharacterDeviceNotification(i18n("The character device at /dev/acer-gkbbl-static-0 is not available. Please make sure the necessary kernel module is installed and loaded."))
+                            errorTitle   = "RGB config (Acer): Static character device not available"
+                            errorMessage = "The character device at /dev/acer-gkbbl-static-0 is not available. Please make sure the necessary kernel module is installed and loaded."
+                            errorMessageDialog.open()
                             break;
                     } 
                 } else {
                     if (stderr.length) {
-                        unexpectedErrorNotification(stderr)
+                        errorTitle   = "RGB config (Acer): Unexpected error"
+                        errorMessage = stderr
+                        errorMessageDialog.open()
                     }
                 }
             }
