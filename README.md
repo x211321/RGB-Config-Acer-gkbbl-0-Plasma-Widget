@@ -58,3 +58,26 @@ Use the following command to install the widget via command line
 plasmapkg2 -u RGB-Config-Acer-<VERSION>.plasmoid
 ```
 
+## Manual update
+KDE Plasma can be somewhat finicky when it comes to manually updating plasma widgets, at least in my experience. 
+
+I usually update the widget via the command line and afterwards restart the plasma shell. This way I don't have to deal with the process in the widget manager.
+
+```
+plasmapkg2 -u RGB-Config-Acer-<VERSION>.plasmoid
+nohup plasmashell --replace &
+```
+
+# Configuration
+As usual right clicking the widget brings up an option to open the widget configuration. Thus far three options are available.
+
+![Config general](./screenshots/config_general.png)
+
+## Show header
+Display a label at the top of the widget displaying the widget name.
+
+## Apply last settings on startup
+Automatically apply the last used RGB settings when the widget is started. This way the RGB settings are automatically restored when you log into KDE Plasma.
+
+## Tray icon color
+I've not yet figured out how to integrate the icon color with the active color theme. For now this option allows you to adjust the icon color manually. 
