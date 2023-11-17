@@ -90,6 +90,7 @@ def applySettings():
         # Activate Static mode
         pload = [0] * RGB_PAYLOAD_SIZE
         pload[2] = brightness
+        pload[9] = 1
 
         # Write to RGB device
         writePayload(RGB_DEVICE, pload)
@@ -104,6 +105,7 @@ def applySettings():
         pload[5] = colors[0][0]
         pload[6] = colors[0][1]
         pload[7] = colors[0][2]
+        pload[9] = 1
 
         # Write to RGB device
         writePayload(RGB_DEVICE, pload)
