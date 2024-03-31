@@ -1,4 +1,4 @@
-# RGB-Config-Acer-gkbbl-0-Plasma-Widget
+# RGB-Config-Acer-gkbbl-0-Plasma-Widget (Plasma 5)
 A KDE plasma widget for controlling RGB settings of the Acer-WMI kernel module via the acer-gkbbl-0 character device (4 zone RGB keyboards)
 
 Visit JafarAkhondali's [project page](https://github.com/JafarAkhondali/acer-predator-turbo-and-rgb-keyboard-linux-module) for information on the required kernel module
