@@ -5,6 +5,10 @@ Visit JafarAkhondali's [project page](https://github.com/JafarAkhondali/acer-pre
 
 For a non-KDE solution and additional functionality check out my [other project](https://github.com/x211321/RGB-Config-Acer-gkbbl-0/)
 
+
+**⚠ This version of the widget is for Plasma 5, please use the [new version](https://github.com/x211321/RGB-Config-Acer-gkbbl-0-Plasma-Widget-Plasma6) if you are running Plasma 6.**
+
+
 ![Main window](./screenshots/plasma_widget_tray.png)
 
 # Features
